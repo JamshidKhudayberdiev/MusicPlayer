@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css2?family=Varela&display=swap);
+ 
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Varela', sans-serif;
+    background: url(./bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    box-shadow: 0px 0px 30px 9px rgba(27, 46, 67, 0.2);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    
+}
+.title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+}
+.img-container {
+    height: 160px;
+    width: 160px;
+    margin: 60px 0;
+}
+.cover {
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    object-fit: cover;
+    animation-name: rotateImage;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    
+}
+
+.container.play .cover {
+    animation-play-state: running;
+}
+@keyframes rotateImage{
+    0%{
+        transform: rotate(360deg);
+
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.progress-container {
+    width: 60%;
+    background-color: #fff;
+    height: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+
+
+}
+.progress {
+    background-color: red;
+    height: 4px;
+    border-radius: inherit;
+    width: 0%;
+}
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+.btn {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1.3em;
+}
+.time{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn-big {
+    font-size: 1.5em;
+    
+}
+
